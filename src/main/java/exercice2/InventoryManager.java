@@ -22,8 +22,10 @@ public class InventoryManager {
 
     /**
      * Méthode permettant de supprimer
-     * */
-    public void retirerProduct(String IdProduit, int nombreProduit) {
+     *
+     * @return
+     */
+    public Object retirerProduct(String IdProduit, int nombreProduit) {
         if (!this.inventory.containsKey(IdProduit)) {
             throw new IllegalArgumentException("Le produit n'existe pas");
         }
@@ -33,7 +35,9 @@ public class InventoryManager {
             throw new IllegalArgumentException("In n'y a plus de produit");
         }
 
-        this.inventory.put(IdProduit, quantiteActuelle - nombreProduit);
+        int nouveauNombre = quantiteActuelle - nombreProduit;
+        this.inventory.put(IdProduit, nouveauNombre);
+        return nouveauNombre;
     }
     /**
      * Méthode Get

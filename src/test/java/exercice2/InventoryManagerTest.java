@@ -52,4 +52,15 @@ public class InventoryManagerTest {
         inventaireManager.ajouterProduct("Couche", 10);
         assertThrows(IllegalArgumentException.class, () -> inventaireManager.retirerProduct("Couche", 20));
     }
+
+    /**
+    * Enlever 80 quand j'en ai 100
+    * */
+
+    @Test
+    public void testSuppressionOk()
+    {
+        inventaireManager.ajouterProduct("Bebe", 100);
+        assertEquals(20,inventaireManager.retirerProduct("Bebe", 80));
+    }
 }

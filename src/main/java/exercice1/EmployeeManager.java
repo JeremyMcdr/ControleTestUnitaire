@@ -1,4 +1,4 @@
-package org.example;
+package exercice1;
 
 /**
  * Cette classe représente la gestion des employé, salaire en fonction du grade

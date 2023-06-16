@@ -1,4 +1,4 @@
-package org.example;
+package exercice1;
 
 import org.junit.jupiter.api.*;
 
